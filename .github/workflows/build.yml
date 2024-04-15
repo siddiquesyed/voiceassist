@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
      
       - name: Get Date
@@ -32,7 +32,7 @@ jobs:
         id: buildozer
         with:
           command: buildozer android debug
-          buildozer_version: stable
+          buildozer_version: master
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
